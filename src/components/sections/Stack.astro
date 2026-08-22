@@ -1,0 +1,28 @@
+---
+import { stack } from "@/data/stack.data";
+import StackCard from "../StackCard.astro";
+import SectionContainer from "../ui/SectionContainer.astro";
+---
+
+<SectionContainer>
+    <div
+        id="stack"
+        class="flex flex-col justify-center items-start gap-5 w-full"
+    >
+        <h2
+            class="text-3xl md:text-4xl font-extrabold text-primary text-center"
+        >
+            Stack de tecnologías
+        </h2>
+
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 text-white w-full"
+        >
+            <StackCard title="Lenguajes" items={stack.languages} />
+            <StackCard title="Frontend" items={stack.frontend} />
+            <StackCard title="Backend" items={stack.backend} />
+            <StackCard title="Bases de datos" items={stack.database} />
+            <StackCard title="Estilos & UI" items={stack.styles} />
+        </div>
+    </div>
+</SectionContainer>

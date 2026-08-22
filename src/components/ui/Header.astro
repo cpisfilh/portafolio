@@ -1,0 +1,39 @@
+---
+import Sidebar from "./Sidebar.astro";
+
+const navItemClass =
+    "text-surface hover:text-primary hover:font-bold transition-all duration-300 border-b-2 border-b-transparent hover:border-b-primary";
+---
+
+<header
+    class="sticky z-10 top-0 flex justify-between items-center text-primary px-5 md:px-12 bg-neutral shadow-[0_0_20px_rgba(173,198,255,0.15)] border-b border-white/10 h-20"
+>
+    <a href="/" class="font-bold tracking-tighter text-2xl">
+        <span>KreminDev</span>
+    </a>
+    <nav class="hidden md:block">
+        <ul class="flex gap-10">
+            <li class={navItemClass}>
+                <a href="#experiencia">Experiencia</a>
+            </li>
+            <li class={navItemClass}>
+                <a href="#projects">Proyectos</a>
+            </li>
+            <li class={navItemClass}>
+                <a href="#stack">Stack</a>
+            </li>
+            <li class={navItemClass}>
+                <a href="#contacto">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flex gap-4 items-center">
+        <Sidebar />
+        <a
+            href="#contacto"
+            class="bg-primary text-neutral px-4 py-2 md:px-8 md:py-2 rounded font-bold hover:scale-105 active:scale-95 transition-transform"
+        >
+            Contáctame
+        </a>
+    </div>
+</header>

@@ -1,0 +1,35 @@
+---
+import SectionContainer from "@/components/ui/SectionContainer.astro";
+---
+
+<SectionContainer>
+    <div class="flex flex-col justify-center items-start gap-5">
+        <picture
+            class="w-fit mx-auto flex justify-center hover:scale-105 hover:drop-shadow hover:drop-shadow-primary transition-transform duration-300"
+        >
+            <img
+                class="rounded-full border-secondary border-double border-5"
+                width="220"
+                height="220"
+                src="/images/avatar.png"
+                alt="Avatar de Crishian"
+            />
+        </picture>
+        <div class="w-full">
+            <h2
+                class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary text-center"
+            >
+                Hola, soy Crishian Pisfil
+            </h2>
+            <h3 class="text-2xl font-extrabold text-white text-center mt-2">
+                ¡Un gusto enorme saludarte!
+            </h3>
+        </div>
+        <p class="text-lg text-surface text-center">
+            Durante más de 3 años he desarrollado aplicaciones web para empresas
+            de distintos sectores. Me gusta construir frontend escalables,
+            optimizar el rendimiento y enfrentar nuevos retos. Si hay algo que
+            no conozco, lo aprendo, lo pongo en práctica y sigo adelante.
+        </p>
+    </div>
+</SectionContainer>

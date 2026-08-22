@@ -1,0 +1,119 @@
+---
+import SectionContainer from "../ui/SectionContainer.astro";
+import GithubLogo from "@/icons/github-logo.svg";
+import LinkedInLogo from "@/icons/linkedin-logo.svg";
+import WhatsappLogo from "@/icons/whatsapp-logo.svg";
+import { File, Mail } from "@lucide/astro";
+
+---
+
+<SectionContainer>
+    <div
+        id="contacto"
+        class="flex flex-col items-center gap-8 py-10 w-full"
+    >
+        <div class="text-center">
+            <h2
+                class="text-3xl md:text-4xl font-extrabold text-primary text-center"
+            >
+                Contacto
+            </h2>
+
+            <p class="mt-3 max-w-xl text-slate-400">
+                ¿Tienes un proyecto, una oportunidad o simplemente quieres
+                conversar? Puedes encontrarme en cualquiera de estos medios.
+            </p>
+        </div>
+
+        <div class="grid w-full grid-cols-1 gap-2 lg:grid-cols-2">
+            <a
+                href="https://github.com/cpisfilh"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 rounded-xl border border-primary/10 bg-primary/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-primary/10"
+            >
+                <div
+                    class="flex size-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-slate-950"
+                >
+                    <GithubLogo />
+                </div>
+
+                <div>
+                    <span class="text-sm text-slate-500">
+                        GitHub
+                    </span>
+
+                    <p class="font-medium text-slate-200">
+                        @cpisfilh
+                    </p>
+                </div>
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/cpisfilhernandez"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 rounded-xl border border-primary/10 bg-primary/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-primary/10"
+            >
+                <div
+                    class="flex size-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-slate-950"
+                >
+                    <LinkedInLogo />
+                </div>
+
+                <div>
+                    <span class="text-sm text-slate-500">
+                        LinkedIn
+                    </span>
+
+                    <p class="font-medium text-slate-200">
+                        /in/cpisfilhernandez
+                    </p>
+                </div>
+            </a>
+
+            <a
+                href="mailto:correo@ejemplo.com"
+                class="group flex items-center gap-4 rounded-xl border border-primary/10 bg-primary/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-primary/10"
+            >
+                <div
+                    class="flex size-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-slate-950"
+                >
+                    <Mail />
+                </div>
+
+                <div>
+                    <span class="text-sm text-slate-500">
+                        Email
+                    </span>
+
+                    <p class="font-medium text-slate-200">
+                        cpisfilhernandez@gmail.com
+                    </p>
+                </div>
+            </a>
+
+            <a
+                href="/cv/CV-CristhianPisfil.pdf"
+                download="CV-CristhianPisfil.pdf"
+                class="group flex items-center gap-4 rounded-xl border border-primary/10 bg-primary/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-primary/10"
+            >
+                <div
+                    class="flex size-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-slate-950"
+                >
+                    <File />
+                </div>
+
+                <div>
+                    <span class="text-sm text-slate-500">
+                        Curriculum
+                    </span>
+
+                    <p class="font-medium text-slate-200">
+                        Ver mi CV
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</SectionContainer>

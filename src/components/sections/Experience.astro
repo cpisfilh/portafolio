@@ -1,0 +1,32 @@
+---
+import SectionContainer from "../ui/SectionContainer.astro";
+import ExperienceItem from "../ExperienceItem.astro";
+import { experienceData } from "../../data/experience.data.ts";
+---
+
+<SectionContainer>
+    <div
+        id="experiencia"
+        class="flex flex-col justify-center items-start gap-5"
+    >
+        <h2
+            class="text-3xl md:text-4xl font-extrabold text-primary text-center"
+        >
+            Experiencia laboral
+        </h2>
+        <ol class="relative border-s border-default text-white">
+            {
+                experienceData.map((experience) => (
+                    <ExperienceItem
+                        position={experience.position}
+                        company={experience.company}
+                        fromDateText={experience.fromDateText}
+                        toDateText={experience.toDateText}
+                        current={experience.current}
+                        description={experience.description}
+                    />
+                ))
+            }
+        </ol>
+    </div>
+</SectionContainer>

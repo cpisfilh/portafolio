@@ -1,0 +1,50 @@
+---
+import { ArrowRight, Download } from "@lucide/astro";
+import SectionContainerScreen from "@/components/ui/SectionContainerScreen.astro";
+---
+
+<SectionContainerScreen>
+    <div class="flex flex-col justify-center gap-5 w-full">
+        <div class="w-full">
+            <div
+                class="w-fit mx-auto px-3 py-1 bg-primary/10 border border-primary/50 rounded-xl mb-4"
+            >
+                <span class="font-semibold text-primary text-xs md:text-sm"
+                    >DISPONIBLE PARA CONTRATOS</span
+                >
+            </div>
+            <h1
+                class="text-5xl md:text-6xl font-extrabold text-white text-center"
+            >
+                Desarrollador Frontend, construyendo <span
+                    class="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary"
+                    >aplicaciones web modernas y escalables</span
+                >
+            </h1>
+        </div>
+        <p class="text-base md:text-lg text-surface text-center">
+            Más de 3 años desarrollando frontend con React, Next.js, Astro y
+            TypeScript, enfocándome en rendimiento, mantenibilidad y una
+            integración sólida con el backend.
+        </p>
+        <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-5 w-full"
+        >
+            <a
+                class="w-fit sm:w-64 flex justify-center items-center px-8 py-2 bg-primary text-on-primary font-bold rounded transition-all hover:translate-y-[-2px] hover:shadow-[0_0_20px_rgba(173,198,255,0.4)]"
+                href="#projects"
+            >
+                Ver proyectos
+                <ArrowRight />
+            </a>
+            <a
+                href="/cv/CV-CristhianPisfil.pdf"
+                download="CV-CristhianPisfil.pdf"
+                class="w-fit sm:w-64 flex justify-center items-center gap-2 px-8 py-2 text-white border rounded font-bold hover:bg-white/5 transition-all"
+            >
+                Descargar CV
+                <Download />
+            </a>
+        </div>
+    </div>
+</SectionContainerScreen>

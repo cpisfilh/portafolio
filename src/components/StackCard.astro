@@ -1,0 +1,14 @@
+---
+import StackCardItem from "./StackCardItem.astro";
+
+const { title, items } = Astro.props;
+---
+
+<article class="bg-primary/5 rounded p-8 w-full shadow-none hover:shadow-md hover:shadow-primary transition-shadow duration-300">
+    <header class="text-secondary font-bold text-xl font-mono mb-2 border-b-2 border-secondary/20 pb-2">
+        {title}
+    </header>
+    <div class="flex flex-col gap-2">
+        {items.map((e) => <StackCardItem Logo={e.logo} title={e.title} />)}
+    </div>
+</article>

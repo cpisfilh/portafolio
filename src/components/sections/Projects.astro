@@ -1,0 +1,46 @@
+---
+import SectionContainer from "../ui/SectionContainer.astro";
+import ProjectCard from "../ProjectCard.astro";
+import { projectsData } from "@/data/projects.data";
+---
+
+<SectionContainer>
+    <div
+        id="projects"
+        class="flex flex-col justify-center items-start gap-5 w-full"
+    >
+        <h2
+            class="text-3xl md:text-4xl font-extrabold text-primary text-center"
+        >
+            Proyectos
+        </h2>
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-white w-full"
+        >
+            {
+                projectsData.map((item) => (
+                    <ProjectCard
+                        id={item.title}
+                        image={item.image}
+                        title={item.title}
+                        description={item.description}
+                        url={item.url}
+                        private={item.private}
+                        technologies={item.technologies}
+                        challenges={item.challenges}
+                    />
+                ))
+            }
+        </div>
+        <p
+            class="rounded-lg border border-primary/10 border-l-4 border-l-primary bg-primary/5 px-5 py-4 text-justify leading-7 text-primary shadow-lg shadow-black/10"
+        >
+            Cómo puedes ver tengo experiencia en los rubros de hotelería, renta de
+            autos, alojamientos en general y en sistemas administrativos (backoffice).
+            He pasado por varias tecnologías tanto frontend como backend y la
+            experiencia me ha enseñado que cada proyecto tiene sus propios objetivos y
+            desafíos. Si quieres conocer más sobre mis proyectos y mis habilidades, no
+            dudes en contactarme.
+        </p>
+    </div>
+</SectionContainer>

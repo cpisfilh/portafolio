@@ -1,0 +1,57 @@
+---
+import { Menu, X } from "@lucide/astro";
+
+const navItemClass =
+    "text-surface hover:text-primary text-center hover:font-bold transition-all duration-300 hover:bg-secondary/10 py-5 cursor-pointer";
+---
+
+<div class="flex md:hidden">
+    <input class="hidden" type="checkbox" id="sidebar-input" />
+    <label class="select-none cursor-pointer" for="sidebar-input">
+        <Menu class="menu" />
+        <X class="close" />
+    </label>
+
+    <div class="overlay bg-neutral transform transition-all duration-500">
+        <nav class="w-full h-full">
+            <ul class="grid grid-cols-1">
+                <a class={navItemClass} href="#projects">Proyectos</a>
+                <a class={navItemClass} href="#stack">Stack</a>
+                <a class={navItemClass} href="#experiencia">Experiencia</a>
+                <a class={navItemClass} href="#contacto">Contacto</a>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<style>
+    .overlay {
+        position: fixed;
+        z-index: 2;
+        top: 80px;
+        left: calc(-250px - 100vw);
+        width: 100vw;
+        height: calc(100vh - 80px);
+    }
+
+    #sidebar-input:checked ~ .overlay {
+        left: 0;
+        overflow: hidden;
+    }
+
+    body:has(#sidebar-input:checked) {
+        overflow: hidden;
+    }
+
+    .close {
+        display: none;
+    }
+
+    #sidebar-input:checked + label .menu {
+        display: none;
+    }
+
+    #sidebar-input:checked + label .close {
+        display: block;
+    }
+</style>
